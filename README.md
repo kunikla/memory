@@ -17,6 +17,7 @@ Version 1.3
 
 Version 1.4
   * use Bootstrap to make display responsive
+  * add favicon
 
 Version 2.0
   * Allow user to log in
