@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--***********************************************************************************************
+ * Animal Memory Game
+ * Copyright 2016 Christina Hamilton
+ * 
+ * Version 1.0, released 04/05/16
+ * 
+ * 
+ * 
+ * 
+***********************************************************************************************-->
+<html>
+<head>
+
+	<title>Animal Memory</title>
+	
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<!-- Have some fun with Google Fonts :) -->
+	<link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+	
+</head>
+
+
+<body>
+
+  <div id='wrapper'>
+  
+    <header>
+
+	<h1 class="title">Animal Memory Game</h1>
+
+    </header>
+    
+    <main>
+
+	<!-- Left side, where the gameboard is displayed -->
+	<div id='gametable'>
+	  
+	  <div id='message'>
+	  </div>
+	  
+	  <div id='game-board'>
+	    <div id='game-pieces'>
+	      <table class="cardgrid">
+		<tr>
+		  <td id="cell-1"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-2"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-3"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		</tr>
+		<tr>
+		  <td id="cell-4"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-5"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-6"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		</tr>
+		<tr>
+		  <td id="cell-7"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-8"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-9"  class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		</tr>
+		<tr>
+		  <td id="cell-10" class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-11" class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		  <td id="cell-12" class="big-card-cell back"><img src="images/card-back.png" class="big-card rounded"></td>
+		</tr>
+	      </table>
+	    </div> <!-- game-background -->
+	  </div>   <!-- game-board -->
+	  
+	  <!-- Button to start a new game -->
+	  <input type='button' id='newgame-btn' value='New Game'>
+	  
+	</div>     <!-- gametable -->
+	
+	<!-- Right side with the instructions and scores -->
+	<div id='players'>
+		
+	  <div id='new-names'>
+	    <p>Welcome to the game! Please enter your names.</p>
+	    
+	    <label for='player1'>Player 1: </label>
+	    <input type='text' value=""   name='player1' id='player1' class='p-name' maxlength="25"><br>
+	    <label for='player2'>Player 2: </label>
+	    <input type='text' value="" name='player2' id='player2' class='p-name' maxlength="25"><br>
+		
+	    <!-- put check box here to save scores in database -->
+	    
+	    <!-- Button to start the game -->
+	    <input type='button' id='startgame-btn' value="Let's play!">
+		
+	  </div>  <!-- #new-names -->
+		
+	  <div id='play-game' class='hide'>
+		
+	    <div id='instructions'>
+	      <div>Can you find the matching cards for all 6 animals? Click on two cards. If they match, you keep the cards and take another turn.
+		 If not, the other player gets a turn.</div>
+	    </div> <!-- #instructions -->
+		
+	    <div id='Player1'>
+	      <span id='name-p1'></span>
+	      <span id='status-p1' class='msg status'></span><br>
+	      <div id='prompt-p1' class='msg prompt'></div>
+	      <div id='pairs-p1'>
+		<table class='cardpairs'>
+	      	  <tr>
+		    <th id='p1n1' class='sm-card-name'></td>
+		    <th id='p1n2' class='sm-card-name'></td>
+		    <th id='p1n3' class='sm-card-name'></td>
+		    <th id='p1n4' class='sm-card-name'></td>
+		    <th id='p1n5' class='sm-card-name'></td>
+		    <th id='p1n6' class='sm-card-name'></td>
+		  </tr>
+		  <tr>
+		    <td id='p1c1' class='sm-card-cell'></td>
+		    <td id='p1c2' class='sm-card-cell'></td>
+		    <td id='p1c3' class='sm-card-cell'></td>
+		    <td id='p1c4' class='sm-card-cell'></td>
+		    <td id='p1c5' class='sm-card-cell'></td>
+		    <td id='p1c6' class='sm-card-cell'></td>
+		  </tr>
+		</table>
+	      </div> <!-- p1pairs -->
+	    </div>   <!-- Player1 -->
+		
+	    <div id='Player2'>
+	      <span id='name-p2'></span>
+	      <span id='status-p2' class='msg status'></span><br>
+	      <div id='prompt-p2' class='msg prompt'></div>
+	      <div id='pairs-p2'>
+		<table class='cardpairs'>
+		  <tr>
+		    <th id='p2n1' class='sm-card-name'></td>
+		    <th id='p2n2' class='sm-card-name'></td>
+		    <th id='p2n3' class='sm-card-name'></td>
+		    <th id='p2n4' class='sm-card-name'></td>
+		    <th id='p2n5' class='sm-card-name'></td>
+		    <th id='p2n6' class='sm-card-name'></td>
+		  </tr>
+		  <tr>
+		    <td id='p2c1' class='sm-card-cell'></td>
+		    <td id='p2c2' class='sm-card-cell'></td>
+		    <td id='p2c3' class='sm-card-cell'></td>
+		    <td id='p2c4' class='sm-card-cell'></td>
+		    <td id='p2c5' class='sm-card-cell'></td>
+		    <td id='p2c6' class='sm-card-cell'></td>
+		  </tr>
+		</table>
+	      </div> <!-- p2pairs -->
+	    </div>   <!-- Player2 -->
+
+	    <!-- Button to select new players -->
+	    <input type='button' id='newplayers-btn' value='New Players'>
+	    
+	  </div> <!-- play-game -->
+	
+	</div>  <!-- players -->
+	      
+
+	    
+    </main>
+    
+    <div class="clearfix"></div>
+    
+    <footer>
+      <!-- Button to download .zip file with code -->
+      <div style='text-align:center' id='download-btn'><a class='button' href='memory.zip' download>Download Code</a></div>
+      <div style='text-align:center'>Created by Christina Hamilton, &copy;&nbsp;2016</div> <!-- Credits -->
+      
+    </footer>
+  </div>        <!-- wrapper -->
+
+<script src="js/memory.js"></script>	
+	
+</body>
+
+</html> 
