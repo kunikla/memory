@@ -1,0 +1,48 @@
+<!--  <table border="1" style="margin:25px auto">
+	<tr>
+	  <td><b>Animal</b></td>
+	  <td colspan=4><b>Colors</b></td>
+	</tr>
+	<tr>
+	  <td><b>Bear</b></td>
+	  <td style="background-color:#4b3e3a">#4b3e3a</td>
+	  <td style="background-color:#6d4d40">#6d4d40</td>
+	  <td style="background-color:#94725b">#94725b</td>
+	  <td style="background-color:#ffffff"></td>
+	</tr>
+	<tr>
+	  <td><b>Boar</b></td>
+	  <td style="background-color:#3c1f0c">#3c1f0c</td>
+	  <td style="background-color:#76411c">#76411c</td>
+	  <td style="background-color:#fcce5d">#fcce5d</td>
+	  <td style="background-color:#ffffff"></td>
+	</tr>
+	<tr>
+	  <td><b>Buck</b></td>
+	  <td style="background-color:#241105">#241105</td>
+	  <td style="background-color:#5a4a48">#5a4a48</td>
+	  <td style="background-color:#74615e">#74615e</td>
+	  <td style="background-color:#998c68">#998c68</td>
+	</tr>
+	<tr>
+	  <td><b>Fox</b></td>
+	  <td style="background-color:#753813">#753813</td>
+	  <td style="background-color:#934819">#934819</td>
+	  <td style="background-color:#ac551e">#ac551e</td>
+	  <td style="background-color:#c16022">#c16022</td>
+	</tr>
+	<tr>
+	  <td><b>Okapi</b></td>
+	  <td style="background-color:#4f332d">#4f332d</td>
+	  <td style="background-color:#52352f">#52352f</td>
+	  <td style="background-color:#80564e">#80564e</td>
+	  <td style="background-color:#ffffff"></td>
+	</tr>
+	<tr>
+	  <td><b>Rabbit</b></td>
+	  <td style="background-color:#4f3b30">#4f3b30</td>
+	  <td style="background-color:#755a4b">#755a4b</td>
+	  <td style="background-color:#a37f6a">#a37f6a</td>
+	  <td style="background-color:#ffffff">#??????</td>
+	</tr>
+      </table> --> 

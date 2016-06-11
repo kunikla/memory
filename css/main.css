@@ -1,0 +1,240 @@
+/*-------------------------------------------------------------------------------------------------
+ * Animal Memory Game
+ * C 2016 Christina Hamilton
+ * 
+ * Thanks to vecteezy  http://www.vecteezy.com/ for the animal faces "Cute Forest Animals"
+ * Downloaded from http://www.freepik.com/free-vector/cute-forest-animals-collection_789504.htm
+ * 
+ * Thanks to Alexey Usoltsev for the background image, "Wood pattern"
+ * Downloaded from http://subtlepatterns.com/wood-pattern/
+ * 
+-------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------
+HTML5 adjustments
+-------------------------------------------------------------------------------------------------*/
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------
+General
+-------------------------------------------------------------------------------------------------*/
+* {
+	font-family:Boogaloo;
+	font-size:20px;
+	color:#333;
+}
+
+h1 {	
+	text-align:center;
+	font-size:40px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+h2 {
+	font-size:30px;
+	margin-top:0px;
+	margin-bottom:20px;
+}
+
+.clearfix {
+	clear:both;
+}
+
+.circular {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+}
+
+.rounded {
+	border-radius: 5px;
+}
+
+.hide {
+	display:none;
+}
+
+input[type=text] {
+	font-size:20px;
+}
+
+/*-------------------------------------------------------------------------------------------------
+ * Colors: Dark to light
+ * 
+ * Bear    #000 #4b3e3a  #6d4d40  #94725b
+ * Boar    #000 #3c1f0c  #76411c  #fcce5d
+ * Deer    #000 #241105  #5a4a48  #74615e  #998c68
+ * Fox     #000 #753813  #934819  #ac551e  #c16022
+ * Okapi   #000 #4f332d  #52352f  #80564e
+ * Rabbit  #000 #4f3b30  #755a4b  #a37f6a  #??????
+-------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------
+Buttons
+-------------------------------------------------------------------------------------------------*/
+input[type=button] {
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	background: #934819;
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+input[type=button]:hover {
+	background: #2c2707;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button {
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	background: #934819;
+	display: inline-block;
+	margin: 20px auto;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.button:hover {
+	background: #2c2707;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Layout
+-------------------------------------------------------------------------------------------------*/
+body {
+	background-image: url("../images/wood_pattern.png");
+}
+
+#wrapper {
+	width:960px;
+	margin:0px auto;
+}
+
+.title {
+	color:#2C2707;
+}
+
+.prompt {
+	color:red;
+}
+
+.cheer {
+	color:#2C2707;
+}
+
+/* Left column */
+#gametable {
+	width:425px;
+	height:500px;
+	margin-right:50px;
+	float:left;
+}
+
+#game-board {
+	background-color:#2C2707;
+	background-image:url('../images/game-background.jpg');
+	background-repeat:no-repeat;
+	height:416px;
+	width:308px;
+	margin:0px auto;
+}
+
+#game-pieces {
+	height:416px;
+	width:308px;
+	z-index:1; /* So we can place the cards above the background image */
+	overflow:hidden;
+}
+
+#game-pieces td {
+	width:100px;
+	height:100px;
+}
+
+.big-card {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height:80px;
+	width:80px;
+}
+
+.back:hover {
+	cursor:pointer;
+}
+
+/* Right column */
+#players {
+	width:400px;
+	height:500px;
+	float:left;
+	text-align:center;
+}
+
+.p-name {
+	margin-bottom:20px;
+}
+
+#instructions {
+	margin-bottom:20px;
+}
+
+#pairs-p1,
+#pairs-p2 {
+	background-color:#2C2707;
+	height:93px;
+	width:367px;
+	margin: 20px auto;
+}
+
+.cardpairs {
+	border-collapse: collapse;
+	border: 1px solid white;
+
+}
+
+.cardpairs th,
+.cardpairs td {
+	border: 1px solid white;
+	padding:0;
+}
+
+.cardpairs th {
+	height:30px;
+	width:60px;
+	color:#fff;
+}
+
+.cardpairs td {
+	height:60px;
+	width:60px;
+}
+
+.sm-card {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height:60px;
+	width:60px;
+}
