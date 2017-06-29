@@ -38,3 +38,6 @@ Version 2.0
 
 Version 2.1
   * Allow user to store game results
+  
+Version 2.2
+  * Allow more than 2 users
