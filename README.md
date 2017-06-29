@@ -41,3 +41,7 @@ Version 2.1
   
 Version 2.2
   * Allow more than 2 users
+<<<<<<< HEAD
+=======
+  
+>>>>>>> e3d4184de971d84769dc78ffc7b99ea81e2f2a04
