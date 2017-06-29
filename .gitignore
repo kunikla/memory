@@ -1,11 +1,10 @@
-# folders
+# Animal Memory Game
+
+# directories
 .idea
 
 # files
-.directory
-css/.directory
-jss/.directory
-
-
+**/.directory
+.kate-swp
 
 

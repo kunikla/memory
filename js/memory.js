@@ -4,7 +4,7 @@ $(document).ready(function() {
 //	initialize player stats object
 //	initialize gameboard object
 //	initialize GameActive object
-}); 
+});
 
 // *** BUTTON *** Clicked on "New Game" button; resets board and stats
 $('#newgame-btn').click(function() {
@@ -72,6 +72,12 @@ $('#game-pieces td').click(function () {
 });
 
 // *************************************
+// Set up path name to image files
+// stored in a GitHub repository
+// (for licensing reasons)
+var imagePath = 'https://kunikla.github.io/media-library/images/memory/';
+
+// *************************************
 // This set of functions will act on an
 // object that represents the game board
 
@@ -99,7 +105,7 @@ function turnCardOver (cell) {
 	current_animal = card_deck[current_card-1];
 	console.log('turnCardOver: current_animal = ' + current_animal);
 	
-	$(cell).html('<img src="images/' + current_animal + '.svg" class="big-card rounded">');
+	$(cell).html('<img src="' + imagePath + current_animal + '.svg" class="big-card rounded">');
 	$(cell).removeClass('back');
 	$(cell).addClass('front');
 }
