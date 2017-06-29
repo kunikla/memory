@@ -2,7 +2,7 @@
 ### App  - https://github.com/kunikla/memory
 ### Code - https://kunikla.github.io/memory
 
-Version 1.4 - 06/29/17
+Version 1.4.0 - 06/29/17
   * moved licensed images to media-library repository;
    they should not be distributed
    as part of this repository
