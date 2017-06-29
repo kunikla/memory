@@ -2,6 +2,9 @@
 ### App  - https://github.com/kunikla/memory
 ### Code - https://kunikla.github.io/memory
 
+Version 1.4.1 - 06/29/17
+  * fixed path to image of card when displayed in players' piles
+
 Version 1.4.0 - 06/29/17
   * moved licensed images to media-library repository;
    they should not be distributed
@@ -41,7 +44,4 @@ Version 2.1
   
 Version 2.2
   * Allow more than 2 users
-<<<<<<< HEAD
-=======
-  
->>>>>>> e3d4184de971d84769dc78ffc7b99ea81e2f2a04
+

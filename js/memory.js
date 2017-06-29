@@ -335,7 +335,7 @@ function awardPair (which_animal) {
 	console.log('awardPair: which_name_id = ' + which_name_id);
 	$(which_name_id).html(which_animal);
 	console.log('awardPair: which_card_id = ' + which_card_id);
-	$(which_card_id).html('<img src="images/' + which_animal + '.svg" class="sm-card rounded">');
+	$(which_card_id).html('<img src="' + imagePath + which_animal + '.svg" class="sm-card rounded">');
 	
 	awarded_pairs++;
 	
